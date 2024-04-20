@@ -2,7 +2,7 @@ spring:
  application:
   name: springcloud-apigateway
  profiles:
-  active: prod
+  active: staging
  #include: redis
  
  redis:
