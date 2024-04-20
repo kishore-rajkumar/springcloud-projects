@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: springcloud-github-configserver
+  name: springcloud-github-configserver
+spec:
+  ports:
+  - name: eureka
+    port: 8888
+    protocol: TCP
+    targetPort: 8888
+  selector:
+    app: springcloud-github-configserver

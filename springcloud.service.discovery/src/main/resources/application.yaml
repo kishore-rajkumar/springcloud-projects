@@ -1,0 +1,14 @@
+spring:
+ application:
+  name: springcloud.service.discovery
+   
+server:
+ port: 8761
+
+eureka:
+ client:
+  registerWithEureka: false
+  fetchRegistry: false
+
+
+# --> EUREKA SERVICE DISCOVERY SERVER IS AUTONOMOUS- NO DEPENDECY ON EXTERNAL CONFIGURATION <--

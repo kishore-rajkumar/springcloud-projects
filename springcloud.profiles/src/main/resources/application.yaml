@@ -1,0 +1,12 @@
+spring:
+ application:
+  name: springcloud.profiles
+ profiles:
+  active: dev
+  
+server:
+ port: 8080
+  
+welcome.message: Welcome to DEFAULT Profile of Application
+
+

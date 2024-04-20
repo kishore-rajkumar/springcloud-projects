@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: springcloud-api-gateway
+  name: springcloud-api-gateway
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: springcloud-api-gateway
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: springcloud-api-gateway
+    spec:
+      containers:
+      - image: kishore101/springcloud.apigateway:latest
+        name: springcloud-api-gateway
+        ports:
+        - containerPort: 8080

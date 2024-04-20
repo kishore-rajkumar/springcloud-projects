@@ -1,0 +1,34 @@
+spring:
+ application:
+  name: springcloud-apigateway
+ profiles:
+  active: prod
+ #include: redis
+ 
+ redis:
+  host: 172.17.0.4
+  port: 6379
+  
+ cloud:
+  gateway:
+   routes:
+   - id: service-one
+     uri: lb://SPRINGCLOUD-SERVICEONE:5001
+     predicates:
+     - Path= /service-one/**
+     filters:
+     - name: RequestRateLimiter
+       args:
+        redis-rate-limiter.replenishRate: 2
+        redis-rate-limiter.burstCapacity: 2
+         
+   - id: service-two
+     uri: lb://SPRINGCLOUD.SERVICE-TWO:5002
+     predicates:
+     - Path= /service-two/**
+     
+eureka:
+ client:
+  serviceUrl:
+   defaultZone: ${EUREKA_URI:http://10.111.31.221:8761/eureka}
+    

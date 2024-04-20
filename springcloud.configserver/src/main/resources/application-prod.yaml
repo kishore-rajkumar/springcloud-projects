@@ -1,0 +1,5 @@
+#EUREKA -SERVICE DISCOVERY (OPTIONAL)
+eureka:
+ client:
+  serviceUrl:
+   defaultZone: ${EUREKA_URI:http://10.111.31.221:8761/eureka}

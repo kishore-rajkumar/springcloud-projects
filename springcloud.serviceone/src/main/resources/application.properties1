@@ -1,0 +1,12 @@
+spring.application.name=springcloud-serviceone
+
+# CLOUD-CONFIG-SERVER-GITHUB - Mandatory to be declared here
+spring.config.import=optional:configserver:http://localhost:8888
+
+#spring.config.import=optional:configserver:http://172.17.0.3:8888
+
+
+
+
+
+

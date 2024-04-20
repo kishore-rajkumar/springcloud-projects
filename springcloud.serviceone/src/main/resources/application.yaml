@@ -1,0 +1,11 @@
+spring:
+ application:
+  name: springcloud-serviceone
+ profiles:
+  active: staging
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: springcloud-eureka-service-discovery
+  name: springcloud-eureka-service-discovery
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: springcloud-eureka-service-discovery
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: springcloud-eureka-service-discovery
+    spec:
+      containers:
+      - image: kishore101/springcloud.service.discovery:latest
+        name: springcloud-eureka-service-discovery
+        ports:
+        - containerPort: 8761

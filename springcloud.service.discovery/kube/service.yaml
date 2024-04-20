@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: springcloud-eureka-service-discovery
+  name: springcloud-eureka-service-discovery
+spec:
+  ports:
+  - name: eureka
+    port: 8761
+    protocol: TCP
+    targetPort: 8761
+  selector:
+    app: springcloud-eureka-service-discovery

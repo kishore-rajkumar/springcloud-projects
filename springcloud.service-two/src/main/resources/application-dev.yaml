@@ -1,0 +1,4 @@
+# CLOUD-CONFIG-SERVER-GITHUB - Mandatory to be declared here
+spring:
+ config:
+  import: optional:configserver:http://localhost:8888

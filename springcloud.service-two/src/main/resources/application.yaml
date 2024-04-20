@@ -1,0 +1,6 @@
+spring:
+ application:
+  name: springcloud.service-two
+ 
+ profiles:
+  active: staging

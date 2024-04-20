@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: springcloud-github-configserver
+  name: springcloud-github-configserver
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: springcloud-github-configserver
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: springcloud-github-configserver
+    spec:
+      containers:
+      - image: kishore101/springcloud.configserver:latest
+        name: springcloud-github-configserver
+        ports:
+        - containerPort: 8888
